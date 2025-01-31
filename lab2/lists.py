@@ -1,1 +1,5 @@
-list1 = ["abc", 34, True, 40, "male"]
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+print(list3)
