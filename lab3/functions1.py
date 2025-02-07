@@ -23,15 +23,20 @@
 
 # 4) возвращает только prime
 # def filter_prime(l):
+#     listpr=[]
 #     for j in l:
 #         prime=True
-#         for i in range(2,max(l)):
-#             if j==1 or j%i==0 and i!=j:
-#                 prime=False
+#         if j<2:
+#             continue
+#         for i in range(2,int(j**0.5)+1):
+#             if j%i==0:
+#                prime=False
+#                break
 #         if prime:
-#             print(j)
+#             listpr.append(j)
+#     return listpr
 # listOfNum=[int(listOfNum) for listOfNum in input().split()]
-# filter_prime(listOfNum)
+# print(filter_prime(listOfNum))
 
 # 5) all permutations of the string
 # from itertools import permutations 
@@ -106,12 +111,14 @@
 # s=input()
 # palindrome_check(s)
 
-# 12 *****
+# # 12 *****
 # def histogram(ints):
+#     # for i in ints:
+#     #     for j in range(0,int(i)):
+#     #         print("*",end='')
+#     #     print('')
 #     for i in ints:
-#         for j in range(0,int(i)):
-#             print("*",end='')
-#         print('')
+#         print("*"*int(i))
 # ints=input().split()
 # histogram(ints)
 
