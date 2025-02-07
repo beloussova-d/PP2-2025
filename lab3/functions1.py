@@ -87,9 +87,9 @@
 # for i in range(0,len(list1)):
 #     unique=True
 #     for j in range(0,len(list2)):
-#         if(list2[j]==list1[i]):
+#         if list2[j]==list1[i]:
 #             unique=False
-#     if(unique): 
+#     if unique: 
 #         list2.append(list1[i])
 # print(list2)
     
@@ -99,7 +99,7 @@
 #     s=s.replace(" ","")
 #     s=s.lower()
 #     s1=s[::-1]
-#     if(s1==s):
+#     if s1==s:
 #         print("palindrome")
 #     else:
 #         print("not palindrome")
