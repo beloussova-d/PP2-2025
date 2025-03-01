@@ -3,13 +3,14 @@ txt="Jh_h3aa_aaa4KKabbbb"
 txt2="Hello, world."
 txt3="CamelSnakeCamelSnake"
 txt4="camel_snake_camel_snake"
+txt5="Whygy9HhHkkk0"
 #1
 match1=r"ab*"
 x1=re.search(match1, txt)
 print(x1.group(0))
 
 #2
-match2=r"abb|bbb"
+match2=r"ab{2,3}"
 x2=re.search(match2, txt)
 print(x2.group(0))
 
@@ -28,7 +29,7 @@ for i in iter4:
     print(i.group(0))
 
 #5
-match5=r"a.*b"
+match5=r"a.*b$"
 x5=re.search(match5,txt)
 print(x5.group(0))
 
@@ -43,16 +44,16 @@ print(x7)
 
 #8
 words=[]
-match8=r"[A-Z][a-z]*"
+match8=r"[A-Z][^A-Z]*"
 prog8=re.compile(match8)
-iter8=prog8.finditer(txt3)
+iter8=prog8.finditer(txt5)
 for i in iter8:
     words.append(i)
 for i in words:
     print(i.group(0))
 
 #9
-x9=re.sub(r"([a-z])([A-Z])",r"\1 \2",txt3)
+x9=re.sub(r"(\w)([A-Z])",r"\1 \2",txt5)   
 print(x9)
 
 #10
